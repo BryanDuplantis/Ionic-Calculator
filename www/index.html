@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Let's Calculate</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+  </head>
+
+  <body ng-app="starter" ng-controller="messageCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Let's Calculate!</h1>
+      </ion-header-bar>
+      <ion-content>
+
+      <div class="display" ng-cloak> {{ display }} </div>
+
+      <div class="col-xs-12">
+
+        <div id="row1" class="row">
+              <button type="button" class="button button-stable" ng-click="operationButtonClick()">x<sup>2</sup></button>
+              <button type="button" class="button button-stable" ng-click="sin();">sin</button>
+              <button type="button" class="button button-stable" ng-click="cos();">cos</button>
+              <button type="button" class="button button-stable" ng-click="tan();">tan</button>
+        </div>
+
+        <div id="row2" class="row">
+              <button type="button" class="button button-stable" ng-click="sqrt();">√x</button>
+              <button type="button" class="button button-stable" ng-click="inverseCos();">sin<sup>-1</sup></button>
+              <button type="button" class="button button-stable" ng-click="operationButtonClick()">cos<sup>-1</sup></button>
+              <button type="button" class="button button-stable" ng-click="operationButtonClick()">tan<sup>-1</sup></button>
+        </div>
+
+        <div id="row3" class="row">
+              <button type="button" class="button button-stable" ng-click="button(1)">1</button>
+              <button type="button" class="button button-stable" ng-click="button(2)">2</button>
+              <button type="button" class="button button-stable" ng-click="button(3)">3</button>
+              <button type="button" class="button button-stable" ng-click="divided()">%</button>
+        </div>
+
+        <div id="row4" class="row">
+              <button type="button" class="button button-stable" ng-click="button(4)">4</button>
+              <button type="button" class="button button-stable" ng-click="button(5)">5</button>
+              <button type="button" class="button button-stable" ng-click="button(6)">6</button>
+              <button type="button" class="button button-stable" ng-click="multiplication()">X</button>
+        </div>
+
+        <div id="row5" class="row">
+              <button type="button" class="button button-stable" ng-click="button(7)">7</button>
+              <button type="button" class="button button-stable" ng-click="button(8)">8</button>
+              <button type="button" class="button button-stable" ng-click="button(9)">9</button>
+              <button type="button" class="button button-stable" ng-click="addition()">+</button>
+        </div>
+
+        <div id="row6" class="row">
+              <button type="button" class="button button-stable" ng-click="button(0)">0</button>
+              <button type="button" class="button button-stable" ng-click="button(.)">.</button>
+              <button type="button" class="button button-stable" ng-click="subtraction()">-</button>
+        </div>
+
+        <div id="row7" class="row">
+              <button type="button" class="button button-stable" ng-click="clear()">CLEAR</button>
+              <button type="button" class="button button-stable" ng-click="calculate()">=</button>
+        </div>
+      </div>
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
