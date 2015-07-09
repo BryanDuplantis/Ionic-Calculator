@@ -5,14 +5,40 @@
   font-size: 60px;
 }
 
-.title {
+.bar-header {
   font-size: 25px;
 }
 
-button {
+.button {
   width: 100%;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.operationBtn {
+  background-color: orange;
+}
+
+.calculateBtn {
+  background-color: orange;
+}
+
+.clearBtn {
+  background-color: white;
+}
+
+.numbersBtn {
+  background-color: lightgrey;
+}
+
+.otherBtns {
+  background-color: rgb(49,176,253);
 }
 
 .row {
   margin: 2px;
+}
+
+p {
+  font-size: 15px;
 }

@@ -27,8 +27,8 @@
   <body ng-app="starter" ng-controller="messageCtrl">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Let's Calculate!</h1>
+      <ion-header-bar class="bar bar-header bar-balanced">
+        <h1 class="title">LET'S CALCULATE!</h1>
       </ion-header-bar>
       <ion-content>
 
@@ -36,52 +36,63 @@
 
       <div class="col-xs-12">
 
-        <div id="row1" class="row">
-              <button type="button" class="button button-stable" ng-click="operationButtonClick()">x<sup>2</sup></button>
-              <button type="button" class="button button-stable" ng-click="sin();">sin</button>
-              <button type="button" class="button button-stable" ng-click="cos();">cos</button>
-              <button type="button" class="button button-stable" ng-click="tan();">tan</button>
+        <div class="row">
+              <button type="button" class="button otherBtns" ng-click="operationButtonClick()">x<sup>2</sup></button>
+              <button type="button" class="button otherBtns" ng-click="sin();">sin</button>
+              <button type="button" class="button otherBtns" ng-click="cos();">cos</button>
+              <button type="button" class="button otherBtns" ng-click="tan();">tan</button>
         </div>
 
-        <div id="row2" class="row">
-              <button type="button" class="button button-stable" ng-click="sqrt();">√x</button>
-              <button type="button" class="button button-stable" ng-click="inverseCos();">sin<sup>-1</sup></button>
-              <button type="button" class="button button-stable" ng-click="operationButtonClick()">cos<sup>-1</sup></button>
-              <button type="button" class="button button-stable" ng-click="operationButtonClick()">tan<sup>-1</sup></button>
+        <div class="row">
+              <button type="button" class="button otherBtns" ng-click="sqrt();">√x</button>
+              <button type="button" class="button otherBtns" ng-click="inverseCos();">sin<sup>-1</sup></button>
+              <button type="button" class="button otherBtns" ng-click="inverseSin();">cos<sup>-1</sup></button>
+              <button type="button" class="button otherBtns" ng-click="inverseTan();">tan<sup>-1</sup></button>
         </div>
 
-        <div id="row3" class="row">
-              <button type="button" class="button button-stable" ng-click="button(1)">1</button>
-              <button type="button" class="button button-stable" ng-click="button(2)">2</button>
-              <button type="button" class="button button-stable" ng-click="button(3)">3</button>
-              <button type="button" class="button button-stable" ng-click="divided()">%</button>
+        <div class="row">
+              <button type="button" class="button numbersBtn" ng-click="button(1);">1</button>
+              <button type="button" class="button numbersBtn" ng-click="button(2);">2</button>
+              <button type="button" class="button numbersBtn" ng-click="button(3);">3</button>
+              <button type="button" class="button operationBtn" ng-click="divided();">%</button>
         </div>
 
-        <div id="row4" class="row">
-              <button type="button" class="button button-stable" ng-click="button(4)">4</button>
-              <button type="button" class="button button-stable" ng-click="button(5)">5</button>
-              <button type="button" class="button button-stable" ng-click="button(6)">6</button>
-              <button type="button" class="button button-stable" ng-click="multiplication()">X</button>
+        <div class="row">
+              <button type="button" class="button numbersBtn" ng-click="button(4);">4</button>
+              <button type="button" class="button numbersBtn" ng-click="button(5);">5</button>
+              <button type="button" class="button numbersBtn" ng-click="button(6);">6</button>
+              <button type="button" class="button operationBtn" ng-click="multiplication();">X</button>
         </div>
 
-        <div id="row5" class="row">
-              <button type="button" class="button button-stable" ng-click="button(7)">7</button>
-              <button type="button" class="button button-stable" ng-click="button(8)">8</button>
-              <button type="button" class="button button-stable" ng-click="button(9)">9</button>
-              <button type="button" class="button button-stable" ng-click="addition()">+</button>
+        <div class="row">
+              <button type="button" class="button numbersBtn" ng-click="button(7);">7</button>
+              <button type="button" class="button numbersBtn" ng-click="button(8);">8</button>
+              <button type="button" class="button numbersBtn" ng-click="button(9);">9</button>
+              <button type="button" class="button operationBtn" ng-click="add();">+</button>
         </div>
 
-        <div id="row6" class="row">
-              <button type="button" class="button button-stable" ng-click="button(0)">0</button>
-              <button type="button" class="button button-stable" ng-click="button(.)">.</button>
-              <button type="button" class="button button-stable" ng-click="subtraction()">-</button>
+        <div class="row">
+              <button type="button" class="button numbersBtn" ng-click="button(0);">0</button>
+              <button type="button" class="button numbersBtn" ng-click="button(.);">.</button>
+              <button type="button" class="button operationBtn" ng-click="subtraction();">-</button>
         </div>
 
-        <div id="row7" class="row">
-              <button type="button" class="button button-stable" ng-click="clear()">CLEAR</button>
-              <button type="button" class="button button-stable" ng-click="calculate()">=</button>
+        <div class="row">
+              <button type="button" class="button clearBtn" ng-click="clear();">CLEAR</button>
+              <button type="button" class="button calculateBtn" ng-click="calculate();">=</button>
         </div>
       </div>
+
+      </div>
+    <!-- Scoped variables displayed for debugging -->
+    <p>
+            pendingOperation: {{pendingOperation}}
+        <br>lastOperation: {{lastOperation}}
+        <br>runningTotal: {{runningTotal}}
+        <br>pendingValue: {{pendingValue}}
+        <br>newNumber: {{newNumber}}
+    </p>
+    </div>
 
       </ion-content>
     </ion-pane>
