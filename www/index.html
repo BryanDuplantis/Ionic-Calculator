@@ -24,7 +24,7 @@
     <script src="js/mainCtrl.js"></script>
   </head>
 
-  <body ng-app="starter" ng-controller="messageCtrl">
+  <body ng-app="starter" ng-controller="MainCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar bar-header bar-balanced">
@@ -38,61 +38,50 @@
 
         <div class="row">
               <button type="button" class="button otherBtns" ng-click="operationButtonClick()">x<sup>2</sup></button>
-              <button type="button" class="button otherBtns" ng-click="sin();">sin</button>
-              <button type="button" class="button otherBtns" ng-click="cos();">cos</button>
-              <button type="button" class="button otherBtns" ng-click="tan();">tan</button>
+              <button type="button" class="button otherBtns" ng-click="sine();">sin</button>
+              <button type="button" class="button otherBtns" ng-click="cosine();">cos</button>
+              <button type="button" class="button otherBtns" ng-click="tangent();">tan</button>
         </div>
 
         <div class="row">
-              <button type="button" class="button otherBtns" ng-click="sqrt();">√x</button>
-              <button type="button" class="button otherBtns" ng-click="inverseCos();">sin<sup>-1</sup></button>
-              <button type="button" class="button otherBtns" ng-click="inverseSin();">cos<sup>-1</sup></button>
-              <button type="button" class="button otherBtns" ng-click="inverseTan();">tan<sup>-1</sup></button>
+              <button type="button" class="button otherBtns" ng-click="squareRoot();">√x</button>
+              <button type="button" class="button otherBtns" ng-click="arccosine();">sin<sup>-1</sup></button>
+              <button type="button" class="button otherBtns" ng-click="arcsine();">cos<sup>-1</sup></button>
+              <button type="button" class="button otherBtns" ng-click="arctangent();">tan<sup>-1</sup></button>
         </div>
 
         <div class="row">
-              <button type="button" class="button numbersBtn" ng-click="button(1);">1</button>
-              <button type="button" class="button numbersBtn" ng-click="button(2);">2</button>
-              <button type="button" class="button numbersBtn" ng-click="button(3);">3</button>
-              <button type="button" class="button operationBtn" ng-click="divided();">%</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(1);">1</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(2);">2</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(3);">3</button>
+              <button type="button" class="button operationBtn" ng-click="operation(4);">%</button>
         </div>
 
         <div class="row">
-              <button type="button" class="button numbersBtn" ng-click="button(4);">4</button>
-              <button type="button" class="button numbersBtn" ng-click="button(5);">5</button>
-              <button type="button" class="button numbersBtn" ng-click="button(6);">6</button>
-              <button type="button" class="button operationBtn" ng-click="multiplication();">X</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(4);">4</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(5);">5</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(6);">6</button>
+              <button type="button" class="button operationBtn" ng-click="operation(3);">X</button>
         </div>
 
         <div class="row">
-              <button type="button" class="button numbersBtn" ng-click="button(7);">7</button>
-              <button type="button" class="button numbersBtn" ng-click="button(8);">8</button>
-              <button type="button" class="button numbersBtn" ng-click="button(9);">9</button>
-              <button type="button" class="button operationBtn" ng-click="add();">+</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(7);">7</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(8);">8</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(9);">9</button>
+              <button type="button" class="button operationBtn" ng-click="operation(1);">+</button>
         </div>
 
         <div class="row">
-              <button type="button" class="button numbersBtn" ng-click="button(0);">0</button>
-              <button type="button" class="button numbersBtn" ng-click="button(.);">.</button>
-              <button type="button" class="button operationBtn" ng-click="subtraction();">-</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers(0);">0</button>
+              <button type="button" class="button numbersBtn" ng-click="numbers('.');">.</button>
+              <button type="button" class="button operationBtn" ng-click="operation(2);">-</button>
         </div>
 
         <div class="row">
               <button type="button" class="button clearBtn" ng-click="clear();">CLEAR</button>
-              <button type="button" class="button calculateBtn" ng-click="calculate();">=</button>
+              <button type="button" class="button calculateBtn" ng-click="equals();">=</button>
         </div>
       </div>
-
-      </div>
-    <!-- Scoped variables displayed for debugging -->
-    <p>
-            pendingOperation: {{pendingOperation}}
-        <br>lastOperation: {{lastOperation}}
-        <br>runningTotal: {{runningTotal}}
-        <br>pendingValue: {{pendingValue}}
-        <br>newNumber: {{newNumber}}
-    </p>
-    </div>
 
       </ion-content>
     </ion-pane>
